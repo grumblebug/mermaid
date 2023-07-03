@@ -1,15 +1,8 @@
-<script src="mermaidAPI.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script>
-    mermaidAPI.initialize({
-        startOnLoad:false
-        });
-    $(function(){
-        var graphDefinition = 'graph TB\na-->b';
-        var graph = mermaidAPI.render(graphDefinition);
-        $("#graphDiv").html(graph);
-    });
+    mermaid.initialize({startOnLoad:true});
 </script>
+
 <div class="mermaid">
 flowchart LR
 
