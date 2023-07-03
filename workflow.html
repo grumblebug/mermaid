@@ -1,6 +1,9 @@
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script>
     mermaid.initialize({startOnLoad:true});
+</script>
+
+<div class="mermaid">
 %%{
   init: {
     'theme': 'base',
@@ -14,9 +17,6 @@
     }
   }
 }%%
-</script>
-
-<div class="mermaid">
 graph TD
   A(Anomaly Discovered) --> B{Trac Worthy}
   B -->|Yes| C[Open Trac Ticket]
