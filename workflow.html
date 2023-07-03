@@ -1,1 +1,19 @@
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+    mermaid.initialize({startOnLoad:true});
+</script>
 
+<div class="mermaid">
+graph TD
+  A(Anomaly Discovered) --> B{Trac Worthy}
+  B -->|Yes| C[Open Trac Ticket]
+  B -->|No| D{Ask Developer}
+  D -->|Legitimate| C
+  D -->|Not a problem| E[Document in Trac Wiki]
+  C --> F[SW Manager Assigns Trac]
+  F --> G[Commit Fix]
+  G -->|Issue Closed| H{SQA Test}
+  H -->|Fixed| I[Mark ticket as tested]
+  H -->|Not Fixed| J[Reopen]
+  J -->F
+</div>
